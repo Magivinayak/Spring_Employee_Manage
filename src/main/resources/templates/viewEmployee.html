@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <div class="container-fluid">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link active" th:href = "@{/}">User Management App</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<h2>Employee Full Details</h2>
+<!--   Single employee table to show all details  with fields -->
+<hr>
+<table class="table" >
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Department</th>
+        <th>Salary</th>
+        <th>Type</th>
+        <th>Location</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td th:text="${employee.id}"></td>
+        <td th:text="${employee.firstName}"></td>
+        <td th:text="${employee.lastName}"></td>
+        <td th:text="${employee.email}"></td>
+        <td th:text="${employee.gender}"></td>
+        <td th:text="${employee.department}"></td>
+        <td th:text="${employee.salary}"></td>
+        <td th:text="${employee.empType}"></td>
+        <td th:text="${employee.location}"></td>
+    </tr>
+    </tbody>
+</table>
+<hr>
+   <a th:href="@{/}"> Back to Employee List</a>
+</body>
+</html>
